@@ -21,7 +21,7 @@ jobs:
 
       - uses: nrwl/nx-set-shas@v3
         with:
-          main-branch-name: 'master'
+          main-branch-name: 'main'
 
       - name: 'Build Packages'
         shell: bash
