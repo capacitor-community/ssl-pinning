@@ -2,8 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "start-web": "lerna run start-web",
-    "build": "nx run-many --target=build --parallel=5",
+    "build": "nx run-many --target=build --parallel=5 && nx run-many --target=build-docs --parallel=5",
     "fmt": "nx run-many --target=fmt --parallel=5",
     "lint": "nx run-many --target=lint --parallel=5",
     "publish:dev": "lerna publish prerelease --conventional-commits --conventional-prerelease --preid dev-$(date +\"%Y%m%dT%H%M%S\") --dist-tag dev --force-publish --no-verify-access --no-changelog --no-git-tag-version --no-push --yes",
@@ -15,7 +14,8 @@
   "devDependencies": {
     "@types/node": "^18.13.0",
     "husky": "^8.0.3",
-    "lerna": "^6.4.1"
+    "lerna": "^6.4.1",
+    "typescript": "~4.2.0"
   },
   "engines": {
     "node": ">=18",
