@@ -1,8 +1,7 @@
 ---
-title: Upgrading Auth Connect
+title: Upgrading SSL Pinning
 sidebar_label: Upgrading
 ---
 
-## Upgrading to v4.0.0
 
 Coming Soon...
