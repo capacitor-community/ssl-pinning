@@ -40,7 +40,6 @@
     "build": "pnpm run clean && pnpm run docgen && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
-    "remove-void-implements": "node ../../scripts/remove-void-implements.js",
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {

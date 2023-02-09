@@ -10,7 +10,7 @@ module.exports = {
   baseUrlIssueBanner: false,
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/auth-connect-icon.svg",
+  favicon: "img/ssl-pinning-icon.svg",
   organizationName: "ionic-team",
   projectName: "enterprise-ssl-pinning",
   titleDelimiter: "-",
