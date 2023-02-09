@@ -37,11 +37,10 @@
     "prettier": "prettier",
     "swiftlint": "node-swiftlint",
     "docgen": "docgen --api SSLPinningPlugin --output-readme README.md --output-json dist/docs.json",
-    "build": "pnpm run clean && pnpm run docgen && tsc && rollup -c rollup.config.js && pnpm run docs",
+    "build": "pnpm run clean && pnpm run docgen && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "remove-void-implements": "node ../../scripts/remove-void-implements.js",
-    "docs": "typedoc --plugin typedoc-plugin-markdown --theme ../../node_modules/@ionic/markdown-docs-theme/dist src/index.ts && rm -rf ../../website/docs/interfaces && pnpm run remove-void-implements && mv api/interfaces ../../website/docs && mv api/modules.md ../../website/docs/modules.md && rm -rf api",
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
