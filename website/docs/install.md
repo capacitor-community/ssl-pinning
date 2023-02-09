@@ -3,6 +3,15 @@ title: Installation
 sidebar_label: Installation
 ---
 
-## SSl Pinning Mimimum Requirements
-Your project must have the following to use SSL Pinning.
-- Version `>= 4.5` of `Capacitor` 
+## Installation
+
+If you have no already setup Ionic Enterprise in your app, [follow the one-time setup steps](https://ionic.io/docs/enterprise-starter/enterprise-key).
+
+Next, install the plugin:
+
+### Capacitor
+
+```sh
+npm install @ionic-enterprise/ssl-pinning
+npx cap sync
+```

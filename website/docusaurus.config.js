@@ -1,67 +1,67 @@
+/** @type {import('@docusaurus/types').DocusaurusConfig} */
+const { cleanDocs } = require("./scripts/clean-docs");
+
 module.exports = {
-  title: 'SSl Pinning',
-  tagline: 'SSl Pinning plugin description',
-  url: 'https://ionic.io',
+  title: "SSL Pinning",
+  tagline: "SSL Pinning for any hybrid mobile app",
+  url: "https://ionic.io",
   trailingSlash: false,
-  baseUrl: '/docs/ssl-pinning-plugin/',
+  baseUrl: "/docs/ssl-pinning/",
   baseUrlIssueBanner: false,
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/identity-vault-icon.svg',
-  organizationName: 'ionic-team',
-  projectName: 'ssl-pinning',
-  titleDelimiter: '-',
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/auth-connect-icon.svg",
+  organizationName: "ionic-team",
+  projectName: "enterprise-ssl-pinning",
+  titleDelimiter: "-",
   themeConfig: {
     navbar: {
-      title: 'SSl Pinning',
+      title: "SSL Pinning",
       logo: {
-        alt: 'SSl Pinning Logo',
-        src: 'img/logo.svg',
+        alt: "Auth Connect Logo",
+        src: "img/logo.svg",
       },
       items: [
         {
-          label: 'Platform',
-          position: 'right',
+          type: "docsVersionDropdown",
+        },
+        {
+          label: "Platform",
+          position: "right",
           items: [
             {
-              href: 'https://capacitorjs.com/docs',
-              label: 'Capacitor',
-              target: '_blank',
+              href: "https://capacitorjs.com/docs",
+              label: "Capacitor",
+              target: "_blank",
               rel: null,
-              className: 'link--outbound',
+              className: "link--outbound",
             },
             {
-              href: 'https://ionicframework.com/docs',
-              label: 'Framework',
-              target: '_blank',
+              href: "https://ionicframework.com/docs",
+              label: "Framework",
+              target: "_blank",
               rel: null,
-              className: 'link--outbound',
+              className: "link--outbound",
             },
             {
-              href: 'https://ionic.io/docs/appflow',
-              label: 'Appflow',
+              href: "https://ionic.io/docs/appflow",
+              label: "Appflow",
               target: null,
               rel: null,
             },
             {
-              to: '/',
-              label: 'Identity Vault',
-            },
-            {
-              href: 'https://ionic.io/docs/auth-connect',
-              label: 'Auth Connect',
+              href: "https://ionic.io/docs/identity-vault",
+              label: "Identity Vault",
               target: null,
               rel: null,
             },
             {
-              href: 'https://ionic.io/docs/secure-storage',
-              label: 'Secure Storage',
-              target: null,
-              rel: null,
+              to: "/",
+              label: "SSL Pinning",
             },
             {
-              href: 'https://ionic.io/docs/premier-plugins',
-              label: 'Premier Plugins',
+              href: "https://ionic.io/docs/secure-storage",
+              label: "Secure Storage",
               target: null,
               rel: null,
             },
@@ -73,28 +73,71 @@ module.exports = {
       respectPrefersColorScheme: true,
     },
     tagManager: {
-      trackingID: 'GTM-TKMGCBC',
+      trackingID: "GTM-TKMGCBC",
     },
     prism: {
       theme: { plain: {}, styles: [] },
-      additionalLanguages: ['shell-session'],
+      additionalLanguages: [
+        "shell-session",
+        "kotlin",
+        "groovy",
+        "java",
+        "swift",
+        "ruby",
+      ],
+    },
+    imageZoom: {
+      selector: ".markdown em > img",
+      options: {
+        margin: 24,
+        background: "#eee",
+        scrollOffset: 0,
+      },
     },
   },
-  plugins: ['@ionic-internal/docusaurus-plugin-tag-manager', 'docusaurus-plugin-sass'],
-  themes: ['@ionic-internal/docusaurus-theme'],
+  plugins: [
+    "@ionic-internal/docusaurus-plugin-tag-manager",
+    "docusaurus-plugin-sass",
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        entryPoints: ["../packages/capacitor-plugin/src/index.ts"],
+        tsconfig: "../packages/capacitor-plugin/tsconfig.json",
+        watch: process.env.TYPEDOC_WATCH,
+        out: ".",
+        readme: "none",
+        excludeExternals: true,
+        hideGenerator: true,
+        disableSources: true,
+      },
+    ],
+    () => ({
+      loadContent() {
+        cleanDocs();
+      },
+    }),
+  ],
+  themes: ["@ionic-internal/docusaurus-theme"],
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: "/",
+          sidebarPath: require.resolve("./sidebars.js"),
+          lastVersion: "current",
+          versions: {
+            current: {
+              label: "1.x",
+            },
+          },
         },
         blog: false,
         pages: false,
         theme: {
           customCss: [
-            require.resolve("prismjs/themes/prism-tomorrow.css")
+            require.resolve("prismjs/themes/prism-tomorrow.css"),
+            require.resolve("./src/styles/custom.css"),
           ],
         },
       },

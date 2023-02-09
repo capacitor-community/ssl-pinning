@@ -1,12 +1,10 @@
 ---
-title: SSl Pinning Changelog
+title: SSL Pinning Changelog
 sidebar_label: Changelog
 ---
 
-    
-## [0.0.0] (2023-02-08)
-
+## [1.0.0] (unreleased)
 
 ### Features
 
-* Initial
+- Release SSL Pinning

@@ -45,7 +45,6 @@
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@ionic/markdown-docs-theme": "3.0.1",
     "@capacitor/android": "^4.0.0",
     "@capacitor/core": "^4.0.0",
     "@capacitor/docgen": "^0.0.18",
@@ -57,14 +56,12 @@
     "prettier": "~2.3.0",
     "prettier-plugin-java": "~1.0.2",
     "rimraf": "^3.0.2",
-    "rollup": "^2.32.0",
+    "rollup": "^2.78.1",
     "swiftlint": "^1.0.1",
-    "typedoc": "0.20.30",
-    "typedoc-plugin-markdown": "3.6.0",
-    "typescript": "~4.2.0"
+    "typescript": "~4.7.4"
   },
   "peerDependencies": {
-    "@capacitor/core": "^4.0.0"
+    "@capacitor/core": ">=4.7.0 && <5.0.0"
   },
   "swiftlint": "@ionic/swiftlint-config",
   "eslintConfig": {
