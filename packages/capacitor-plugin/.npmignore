@@ -5,3 +5,4 @@ tsconfig.json
 .prettierrc.js
 .eslintignore
 src/
+cli-scripts/
