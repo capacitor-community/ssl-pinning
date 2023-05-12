@@ -40,6 +40,11 @@ jobs:
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
           npm whoami
+          
+      - name: "Git Config"
+        run: |
+          git config user.name "Github Workflow (on behalf of ${{ github.actor }})"
+          git config user.email "users.noreply.github.com"  
       
       - name: 'Dev Release'
         if: inputs.create-dev-release
