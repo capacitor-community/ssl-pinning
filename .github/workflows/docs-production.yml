@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      # - main
+      - main
     paths:
       - .github/workflows/docs-production.yml
       - website/**
