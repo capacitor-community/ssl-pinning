@@ -1,6 +1,9 @@
 /// <reference types="@capacitor/cli" />
 declare module '@capacitor/cli' {
   export interface PluginsConfig {
+    /**
+     * These config values are available:
+     */
     SSLPinning?: {
       /**
        * Paths to your SSL Certificates relative to the root of your project.
