@@ -3,10 +3,17 @@
   "npmClient": "pnpm",
   "useNx": true,
   "useWorkspaces": true,
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-rc.0",
   "command": {
     "version": {
-      "allowBranch": ["main", "master", "feat/*", "fix/*", "chore/*", "feat!/*"],
+      "allowBranch": [
+        "main",
+        "master",
+        "feat/*",
+        "fix/*",
+        "chore/*",
+        "feat!/*"
+      ],
       "conventionalCommits": true,
       "createRelease": "github",
       "message": "Release %s",
