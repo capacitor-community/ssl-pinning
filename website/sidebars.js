@@ -4,5 +4,6 @@ module.exports = {
     "install",
     "configuration",
     "changelog",
+    'support-policy'
   ],
 };
