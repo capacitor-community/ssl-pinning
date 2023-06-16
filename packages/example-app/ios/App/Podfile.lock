@@ -1,52 +1,52 @@
 PODS:
-  - Capacitor (5.0.1):
+  - Capacitor (5.0.5):
     - CapacitorCordova
-  - CapacitorApp (5.0.1):
+  - CapacitorApp (5.0.3):
     - Capacitor
-  - CapacitorCordova (5.0.1)
-  - CapacitorHaptics (5.0.1):
+  - CapacitorCordova (5.0.5)
+  - CapacitorHaptics (5.0.4):
     - Capacitor
-  - CapacitorKeyboard (5.0.1):
+  - CapacitorKeyboard (5.0.4):
     - Capacitor
-  - CapacitorStatusBar (5.0.1):
+  - CapacitorStatusBar (5.0.4):
     - Capacitor
-  - IonicEnterpriseSslPinning (1.0.0-alpha.0):
+  - IonicEnterpriseSslPinning (1.0.0):
     - Capacitor
 
 DEPENDENCIES:
-  - "Capacitor (from `../../../../node_modules/.pnpm/@capacitor+ios@5.0.1_@capacitor+core@5.0.1/node_modules/@capacitor/ios`)"
-  - "CapacitorApp (from `../../../../node_modules/.pnpm/@capacitor+app@5.0.1_@capacitor+core@5.0.1/node_modules/@capacitor/app`)"
-  - "CapacitorCordova (from `../../../../node_modules/.pnpm/@capacitor+ios@5.0.1_@capacitor+core@5.0.1/node_modules/@capacitor/ios`)"
-  - "CapacitorHaptics (from `../../../../node_modules/.pnpm/@capacitor+haptics@5.0.1_@capacitor+core@5.0.1/node_modules/@capacitor/haptics`)"
-  - "CapacitorKeyboard (from `../../../../node_modules/.pnpm/@capacitor+keyboard@5.0.1_@capacitor+core@5.0.1/node_modules/@capacitor/keyboard`)"
-  - "CapacitorStatusBar (from `../../../../node_modules/.pnpm/@capacitor+status-bar@5.0.1_@capacitor+core@5.0.1/node_modules/@capacitor/status-bar`)"
+  - "Capacitor (from `../../../../node_modules/.pnpm/@capacitor+ios@5.0.5_@capacitor+core@5.0.5/node_modules/@capacitor/ios`)"
+  - "CapacitorApp (from `../../../../node_modules/.pnpm/@capacitor+app@5.0.3_@capacitor+core@5.0.5/node_modules/@capacitor/app`)"
+  - "CapacitorCordova (from `../../../../node_modules/.pnpm/@capacitor+ios@5.0.5_@capacitor+core@5.0.5/node_modules/@capacitor/ios`)"
+  - "CapacitorHaptics (from `../../../../node_modules/.pnpm/@capacitor+haptics@5.0.4_@capacitor+core@5.0.5/node_modules/@capacitor/haptics`)"
+  - "CapacitorKeyboard (from `../../../../node_modules/.pnpm/@capacitor+keyboard@5.0.4_@capacitor+core@5.0.5/node_modules/@capacitor/keyboard`)"
+  - "CapacitorStatusBar (from `../../../../node_modules/.pnpm/@capacitor+status-bar@5.0.4_@capacitor+core@5.0.5/node_modules/@capacitor/status-bar`)"
   - IonicEnterpriseSslPinning (from `../../../capacitor-plugin`)
 
 EXTERNAL SOURCES:
   Capacitor:
-    :path: "../../../../node_modules/.pnpm/@capacitor+ios@5.0.1_@capacitor+core@5.0.1/node_modules/@capacitor/ios"
+    :path: "../../../../node_modules/.pnpm/@capacitor+ios@5.0.5_@capacitor+core@5.0.5/node_modules/@capacitor/ios"
   CapacitorApp:
-    :path: "../../../../node_modules/.pnpm/@capacitor+app@5.0.1_@capacitor+core@5.0.1/node_modules/@capacitor/app"
+    :path: "../../../../node_modules/.pnpm/@capacitor+app@5.0.3_@capacitor+core@5.0.5/node_modules/@capacitor/app"
   CapacitorCordova:
-    :path: "../../../../node_modules/.pnpm/@capacitor+ios@5.0.1_@capacitor+core@5.0.1/node_modules/@capacitor/ios"
+    :path: "../../../../node_modules/.pnpm/@capacitor+ios@5.0.5_@capacitor+core@5.0.5/node_modules/@capacitor/ios"
   CapacitorHaptics:
-    :path: "../../../../node_modules/.pnpm/@capacitor+haptics@5.0.1_@capacitor+core@5.0.1/node_modules/@capacitor/haptics"
+    :path: "../../../../node_modules/.pnpm/@capacitor+haptics@5.0.4_@capacitor+core@5.0.5/node_modules/@capacitor/haptics"
   CapacitorKeyboard:
-    :path: "../../../../node_modules/.pnpm/@capacitor+keyboard@5.0.1_@capacitor+core@5.0.1/node_modules/@capacitor/keyboard"
+    :path: "../../../../node_modules/.pnpm/@capacitor+keyboard@5.0.4_@capacitor+core@5.0.5/node_modules/@capacitor/keyboard"
   CapacitorStatusBar:
-    :path: "../../../../node_modules/.pnpm/@capacitor+status-bar@5.0.1_@capacitor+core@5.0.1/node_modules/@capacitor/status-bar"
+    :path: "../../../../node_modules/.pnpm/@capacitor+status-bar@5.0.4_@capacitor+core@5.0.5/node_modules/@capacitor/status-bar"
   IonicEnterpriseSslPinning:
     :path: "../../../capacitor-plugin"
 
 SPEC CHECKSUMS:
-  Capacitor: c550a8485d00d5d92b4f91a245f43555a2230eb6
-  CapacitorApp: 23d62678d1092403c9c32d8b53c0cdd0da29fb2c
-  CapacitorCordova: 4f8cf089c691f0e21032d22b1014808308cbc467
-  CapacitorHaptics: 4bdfc3b0137e7d9040892c81332827929b896d3c
-  CapacitorKeyboard: 5e1667b7b70e23b147f9fc91bafa458be41cba77
-  CapacitorStatusBar: 4edd082a8dadcedb5b1fa2b8480d67a220c79849
-  IonicEnterpriseSslPinning: 72abdac7eb0802203a9a1e2dc034101fc1bb24d0
+  Capacitor: b1248915663add1bd6567e2b67c1c1fa3abcf5e8
+  CapacitorApp: 7a5dec8b33573707164b293475d5c89ba684364a
+  CapacitorCordova: f8c06b897c74ee8f7701fe10e6443b40822bc83a
+  CapacitorHaptics: e36653b37326d71bb35ae42b944124037dbc3d97
+  CapacitorKeyboard: d1b25fde6f19744ad09c890862aefc6e2a7ded3d
+  CapacitorStatusBar: 190e0321b8734f4244d0c81baa183a00d5806ddf
+  IonicEnterpriseSslPinning: 3cf630b616b63c44b28014c24b28777f89e214b0
 
-PODFILE CHECKSUM: 0e4f0789d53fa3e4121fddcc8ee52e5dac035b83
+PODFILE CHECKSUM: bcbd54c7f07c03ab0d07e36d740666f5a43575ee
 
 COCOAPODS: 1.12.1
