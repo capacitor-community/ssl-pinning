@@ -24,9 +24,10 @@ npx cap sync
 
 These config values are available:
 
-| Prop        | Type                  | Description                                                                                                         | Since |
-| ----------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- | ----- |
-| **`certs`** | <code>string[]</code> | Paths to your SSL Certificates relative to the root of your project. *Your Primary Cert. should be the first entry* | 1.0.0 |
+| Prop                  | Type                  | Description                                                                                                                       | Since |
+| --------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| **`certs`**           | <code>string[]</code> | Paths to your SSL Certificates relative to the root of your project. *Your Primary Cert. should be the first entry*               | 1.0.0 |
+| **`excludedDomains`** | <code>string[]</code> | Domains to exclude from SSL Pinning when making requests. Domains should be be fully qualified domains that include the protocol. | 1.1.0 |
 
 ### Examples
 
@@ -35,8 +36,12 @@ In `capacitor.config.json`:
 ```json
 {
   "plugins": {
+    "CapacitorHttp": {
+      "enabled": true,
+    },
     "SSLPinning": {
-      "certs": ["sslCerts/productionCerts/primary.cer", "sslCerts/productionCerts/backup.cer"]
+      "certs": ["sslCerts/productionCerts/primary.cer", "sslCerts/productionCerts/backup.cer"],
+      "excludedDomains": ["https://analytics.google.com, https://myapi.com/subpath"]
     }
   }
 }
@@ -51,8 +56,12 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   plugins: {
+    CapacitorHttp: {
+      enabled: true,
+    },
     SSLPinning: {
       certs: ["sslCerts/productionCerts/primary.cer", "sslCerts/productionCerts/backup.cer"],
+      excludedDomains: ["https://analytics.google.com, https://myapi.com/subpath"],
     },
   },
 };

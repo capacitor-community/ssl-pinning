@@ -13,14 +13,14 @@
       <ion-label>URL:</ion-label>
       <ion-input
         :value="url"
-        @onIonChange="setUrl($event.detail.value)"
+        @ionChange="setUrl($event.detail.value ?? '')"
         placeholder="Enter URL"
       ></ion-input>
 
       <IonLabel>Implementation:</IonLabel>
       <ion-select
         placeholder="Select Implementation"
-        @onIonChange="setImpl($event.detail.value)"
+        @ionChange="setImpl($event.detail.value)"
         :value="impl"
       >
         <ion-select-option value="FETCH">Fetch</ion-select-option>
@@ -37,7 +37,7 @@
 
 <script setup lang="ts">
 import { CapacitorHttp } from '@capacitor/core';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonText, IonLabel, IonInput, IonButton, IonSelectOption } from '@ionic/vue';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonText, IonLabel, IonInput, IonButton, IonSelect, IonSelectOption } from '@ionic/vue';
 import { ref } from 'vue';
 
 const response = ref('');

@@ -5,6 +5,7 @@ import android.util.Base64
 import android.util.Log
 import com.getcapacitor.Bridge
 import java.io.InputStream
+import java.net.URL
 import java.security.KeyStore
 import java.security.cert.CertificateException
 import java.security.cert.CertificateFactory
@@ -37,6 +38,37 @@ class SSLPinning {
             e.printStackTrace()
         }
         return null
+    }
+
+    fun isDomainExcluded(bridge: Bridge, url: URL): Boolean {
+        val excludedDomains = bridge.config.getPluginConfiguration("SSLPinning")
+            .getArray("excludedDomains")
+
+        if(null == excludedDomains || excludedDomains.isEmpty())   return false
+
+        Log.i(tag, "Checking Excluded Domains: [${excludedDomains.joinToString(", ")}]")
+
+        val isExcluded = excludedDomains.any { domain ->
+            val excludedDomainUrl: URL? = try { URL(domain) } catch (ignored: Exception) { null }
+
+            if (excludedDomainUrl == null) {
+                Log.w(tag, "Invalid URL in Excluded Domains: $domain")
+                false
+            } else if (excludedDomainUrl.protocol.isNullOrEmpty()) {
+                println("The excluded domain string needs to include a protocol: $domain")
+                false
+            } else {
+                excludedDomainUrl.host == url.host && excludedDomainUrl.protocol ==url.protocol
+            }
+        }
+
+        if(isExcluded) {
+            Log.i(tag,"Domain Excluded from SSL Pinning. Performing normal request.")
+        }
+        else {
+            Log.i(tag, "Domain Not Excluded from SSL Pinning.")
+        }
+        return isExcluded
     }
 
     @Throws(Exception::class)

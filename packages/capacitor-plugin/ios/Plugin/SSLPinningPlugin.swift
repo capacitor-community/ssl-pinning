@@ -9,11 +9,57 @@ class SSLPinningHttpRequestHandlerClass: NSObject {
         let httpMethod = params["httpMethod"] as? String
         let config = params["config"] as? InstanceConfiguration
         
+        if(isDomainExcluded(params)) {
+            print("Domain Excluded from SSL Pinning. Performing normal request.")
+            do {
+                try HttpRequestHandler.request(call, httpMethod, config)
+            } catch let error {
+                call.reject(error.localizedDescription)
+            }
+            return
+        }
+        
         do {
             try SSLPinningHttpRequestHandler.sslRequest(call, httpMethod, config)
         } catch let error {
             call.reject(error.localizedDescription)
         }
+    }
+    
+    @objc class func isDomainExcluded(_ params: [String: Any]) -> Bool {
+        guard let call = params["call"] as? CAPPluginCall else { return false }
+        guard let config = params["config"] as? InstanceConfiguration else { return false }
+        guard let excludedDomains = config.getPluginConfig("SSLPinning").getArray("excludedDomains") else {
+            return false
+        }
+        guard let urlString = call.getString("url")?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return false }
+        guard let url = URL(string: urlString) else { return false }
+        guard let host = url.host else { return false }
+        
+        print("Checking Excluded Domains: \(excludedDomains)")
+        
+        // Check if the host is included in the excluded domains
+        let isExcluded = excludedDomains.contains { domain in
+            guard let domain = domain as? String else {
+                print("Invalid URL in Excluded Domains: \(domain)")
+                return false
+            }
+            guard let excludedDomainURL = URL(string: domain) else {
+                print("Invalid URL in Excluded Domains: \(domain)")
+                return false
+            }
+            guard excludedDomainURL.scheme != nil else {
+                print("The excluded domain string needs to include a protocol: \(domain)")
+                return false
+            }
+            guard let excludedHost = excludedDomainURL.host else {
+                return false
+            }
+            
+            return excludedHost == host && excludedDomainURL.scheme == url.scheme
+        }
+        
+        return isExcluded
     }
 }
 
@@ -110,7 +156,7 @@ class URLSessionPinningDelegate: NSObject, URLSessionDelegate {
         guard let certArray = certArray else {
             fatalError("No Certs array in config")
         }
-        print(certArray)
+        print("Loading certs: \(certArray)")
         var certList: [CertListEntry] = []
         for pathOfCert in certArray {
             var entry = CertListEntry()

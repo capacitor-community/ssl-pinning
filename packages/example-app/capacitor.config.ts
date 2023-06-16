@@ -16,6 +16,9 @@ const config: CapacitorConfig = {
       certs: [
         "testCerts/ionic.io.cer",
         // "testCerts/typicode.com.cer" // Un-comment this to have the app succeed at making the request.
+      ],
+      excludedDomains: [
+        "https://google.com",
       ]
     }
   }

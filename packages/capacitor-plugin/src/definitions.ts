@@ -13,6 +13,14 @@ declare module '@capacitor/cli' {
        * @example ["sslCerts/productionCerts/primary.cer", "sslCerts/productionCerts/backup.cer"]
        */
       certs?: string[];
+      /**
+       * Domains to exclude from SSL Pinning when making requests.
+       * Domains should be be fully qualified domains that include the protocol.
+       *
+       * @since 1.1.0
+       * @example ["https://analytics.google.com, https://myapi.com/subpath"]
+       */
+      excludedDomains?: string[];
     };
   }
 }
