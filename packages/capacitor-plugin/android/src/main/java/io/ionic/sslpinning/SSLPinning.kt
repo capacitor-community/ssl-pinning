@@ -28,6 +28,12 @@ class SSLPinning {
                 val sslContext = SSLContext.getInstance("TLS")
                 val pinnedPublicKeys = getPublicKeys(keyStore)
                 sslContext.init(null, arrayOf(PublicKeyTrustManager(trustManagerFactory.trustManagers, pinnedPublicKeys)), null)
+                if(null == sslContext.socketFactory) {
+                    Log.w(tag, "Failed to pin any certificates. Performing normal request.")
+                }
+                else {
+                    Log.i(tag, "Pinned certificates. Executing secure request now.")
+                }
                 return sslContext.socketFactory
             }
             else {
@@ -82,9 +88,10 @@ class SSLPinning {
 
             try {
                 certs[filename.substringBeforeLast(".")] = assetManager.open("certs/$filename")
+                Log.i(tag, "Pinned (certs/$filename).")
             }
             catch(ignored: Exception) {
-                Log.e(tag, "Failed to find cert file in assets: (certs/$filename)")
+                Log.w(tag, "Failed to find cert file in assets: (certs/$filename)")
             }
         }
         return certs.toMap()
