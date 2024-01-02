@@ -3,6 +3,7 @@ module.exports = {
     "overview",
     "install",
     "configuration",
+    "usage",
     "changelog",
     'support-policy'
   ],
