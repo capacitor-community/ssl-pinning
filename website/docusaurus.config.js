@@ -1,3 +1,5 @@
+const { themes } = require("prism-react-renderer");
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 const { cleanDocs } = require("./scripts/clean-docs");
 
@@ -15,16 +17,15 @@ module.exports = {
   projectName: "enterprise-ssl-pinning",
   titleDelimiter: "-",
   themeConfig: {
+    logo: {
+      alt: "SSL Pinning Logo",
+      src: "img/logo-dark.png",
+      srcDark: "img/logo-light.png",
+      width: 121,
+      height: 24,
+    },
     navbar: {
-      title: "SSL Pinning",
-      logo: {
-        alt: "Auth Connect Logo",
-        src: "img/logo.svg",
-      },
       items: [
-        {
-          type: "docsVersionDropdown",
-        },
         {
           label: "Platform",
           position: "right",
@@ -72,18 +73,18 @@ module.exports = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
-    tagManager: {
-      trackingID: "GTM-TKMGCBC",
-    },
     prism: {
-      theme: { plain: {}, styles: [] },
+      theme: themes.github,
+      darkTheme: themes.dracula,
       additionalLanguages: [
         "shell-session",
+        "bash",
         "kotlin",
         "groovy",
         "java",
         "swift",
         "ruby",
+        "json",
       ],
     },
     imageZoom: {
@@ -94,10 +95,26 @@ module.exports = {
         scrollOffset: 0,
       },
     },
+    sidebar: {
+      versionDropdown: {},
+      productDropdown: {
+        title: "SSL Pinning Docs",
+        logo: {
+          width: 20,
+          height: 20,
+          alt: "SSL Pinning Logo",
+          src: "img/components/product-dropdown/logo-dark.png",
+          srcDark: "img/components/product-dropdown/logo-light.png",
+        },
+      },
+      backButton: {
+        url: {
+          href: "/docs",
+        },
+      },
+    },
   },
   plugins: [
-    "@ionic-internal/docusaurus-plugin-tag-manager",
-    "docusaurus-plugin-sass",
     [
       "docusaurus-plugin-typedoc",
       {
@@ -117,28 +134,26 @@ module.exports = {
       },
     }),
   ],
-  themes: ["@ionic-internal/docusaurus-theme"],
   presets: [
     [
-      "@docusaurus/preset-classic",
+      "@ionic-docs/preset-classic",
       {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           lastVersion: "current",
+          breadcrumbs: false,
           versions: {
             current: {
               label: "1.x",
             },
           },
         },
-        blog: false,
-        pages: false,
+        googleTagManager: {
+          containerId: "GTM-TKMGCBC",
+        },
         theme: {
-          customCss: [
-            require.resolve("prismjs/themes/prism-tomorrow.css"),
-            require.resolve("./src/styles/custom.css"),
-          ],
+          customCss: [require.resolve("./src/styles/custom.scss")],
         },
       },
     ],

@@ -16,11 +16,11 @@ function NativeEnterpriseInstall(props: Props): JSX.Element {
     return null;
   }
 
-  const Heading2 = Heading("h2");
-
   return (
     <>
-      <Heading2 id="installation">Installation</Heading2>
+      <Heading as="h2" id="installation">
+        Installation
+      </Heading>
       <p>
         If you have not already setup Ionic Enterprise in your app,{" "}
         <Link
