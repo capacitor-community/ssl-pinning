@@ -1,10 +1,10 @@
 ---
-title: SSL Pinning Changelog
+title: Changelog
 sidebar_label: Changelog
+hide_table_of_contents: true
 ---
 
-## [1.0.0] (unreleased)
+import ChangeLog from '@site/src/components/changelog';
+import releases from "./changelog.json";
 
-### Features
-
-- Release SSL Pinning
+<ChangeLog releases={releases} />
