@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/ionic-team/enterprise-ssl-pinning/compare/1.1.1...1.1.2) (2024-05-21)
+
+
+### Bug Fixes
+
+* cap6 compat ([#16](https://github.com/ionic-team/enterprise-ssl-pinning/issues/16)) ([99f09d8](https://github.com/ionic-team/enterprise-ssl-pinning/commit/99f09d878df0fb83467b226b498f5770c0bb73d8))
+
+
+
+
+
 ## [1.1.1](https://github.com/ionic-team/enterprise-ssl-pinning/compare/1.1.0...1.1.1) (2024-02-20)
 
 **Note:** Version bump only for package example-app
