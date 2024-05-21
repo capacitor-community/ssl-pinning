@@ -2,7 +2,6 @@
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "npmClient": "pnpm",
   "useNx": true,
-  "useWorkspaces": true,
   "version": "1.1.1",
   "command": {
     "version": {

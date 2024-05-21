@@ -7,12 +7,12 @@
     "build": "vue-tsc --noEmit && vite build"
   },
   "dependencies": {
-    "@capacitor/app": "^5.0.3",
-    "@capacitor/core": "^5.0.5",
-    "@capacitor/haptics": "^5.0.4",
-    "@capacitor/ios": "^5.0.5",
-    "@capacitor/keyboard": "^5.0.4",
-    "@capacitor/status-bar": "^5.0.4",
+    "@capacitor/app": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/haptics": "^6.0.0",
+    "@capacitor/ios": "^6.0.0",
+    "@capacitor/keyboard": "^6.0.0",
+    "@capacitor/status-bar": "^6.0.0",
     "@ionic-enterprise/ssl-pinning": "workspace:*",
     "@ionic/vue": "^6.7.5",
     "@ionic/vue-router": "^6.7.5",
@@ -22,15 +22,15 @@
     "vue-router": "^4.2.2"
   },
   "devDependencies": {
-    "@capacitor/cli": "^5.0.5",
-    "@typescript-eslint/eslint-plugin": "^5.59.11",
-    "@typescript-eslint/parser": "^5.59.11",
+    "@capacitor/cli": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.9.0",
+    "@typescript-eslint/parser": "^7.9.0",
     "@vitejs/plugin-vue": "^4.2.3",
-    "eslint": "^8.42.0",
-    "eslint-plugin-vue": "^9.14.1",
-    "typescript": "~4.7.4",
-    "vite": "^4.3.9",
-    "vue-tsc": "^1.6.5"
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.26.0",
+    "typescript": "~5.4.5",
+    "vite": "^5.2.11",
+    "vue-tsc": "^2.0.19"
   },
   "description": "An Ionic project"
 }

@@ -37,31 +37,31 @@
     "prettier": "prettier",
     "swiftlint": "node-swiftlint",
     "docgen": "docgen --api SSLPinningPlugin --output-readme README.md --output-json dist/docs.json",
-    "build": "pnpm run clean && pnpm run docgen && tsc && rollup -c rollup.config.js",
+    "build": "pnpm run clean && pnpm run docgen && tsc && rollup -c rollup.config.mjs",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@capacitor/android": "^5.0.1",
-    "@capacitor/cli": "^5.0.1",
-    "@capacitor/core": "^5.0.1",
-    "@capacitor/docgen": "^0.0.18",
-    "@capacitor/ios": "^5.0.1",
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/docgen": "^0.2.2",
+    "@capacitor/ios": "^6.0.0",
     "@ionic/swiftlint-config": "^1.1.2",
-    "@typescript-eslint/eslint-plugin": "^5.59.2",
-    "@typescript-eslint/parser": "^5.59.2",
-    "eslint": "^8.40.0",
-    "eslint-config-prettier": "^8.8.0",
-    "prettier": "^2.8.8",
+    "@typescript-eslint/eslint-plugin": "^7.9.0",
+    "@typescript-eslint/parser": "^7.9.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "~2.8.8",
     "prettier-plugin-java": "~2.1.0",
     "rimraf": "^3.0.2",
-    "rollup": "^2.78.1",
+    "rollup": "^4.17.2",
     "swiftlint": "^1.0.2",
-    "typescript": "^5.0.4"
+    "typescript": "~5.4.5"
   },
   "peerDependencies": {
-    "@capacitor/core": ">=4.6.0 && <6.0.0"
+    "@capacitor/core": ">=4.6.0 && <7.0.0"
   },
   "swiftlint": "@ionic/swiftlint-config",
   "capacitor": {

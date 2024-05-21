@@ -36,9 +36,6 @@ In `capacitor.config.json`:
 ```json
 {
   "plugins": {
-    "CapacitorHttp": {
-      "enabled": true,
-    },
     "SSLPinning": {
       "certs": ["sslCerts/productionCerts/primary.cer", "sslCerts/productionCerts/backup.cer"],
       "excludedDomains": ["https://analytics.google.com, https://myapi.com/subpath"]
@@ -50,15 +47,12 @@ In `capacitor.config.json`:
 In `capacitor.config.ts`:
 
 ```ts
-/// <reference types="@capacitor/sslpinning" />
+/// <reference types="@ionic-enterprise/ssl-pinning" />
 
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   plugins: {
-    CapacitorHttp: {
-      enabled: true,
-    },
     SSLPinning: {
       certs: ["sslCerts/productionCerts/primary.cer", "sslCerts/productionCerts/backup.cer"],
       excludedDomains: ["https://analytics.google.com, https://myapi.com/subpath"],
