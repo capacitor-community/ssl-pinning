@@ -6,13 +6,14 @@ ext {
 }
 
 buildscript {
+    ext.kotlin_version = project.hasProperty("kotlin_version") ? rootProject.ext.kotlin_version : '1.9.10'
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.2.1'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -39,8 +40,8 @@ android {
         abortOnError false
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility project.hasProperty('targetSdkVersion') ? (rootProject.ext.targetSdkVersion >= 33 ? JavaVersion.VERSION_17 : JavaVersion.VERSION_11) : JavaVersion.VERSION_11
+        targetCompatibility project.hasProperty('targetSdkVersion') ? (rootProject.ext.targetSdkVersion >= 33 ? JavaVersion.VERSION_17 : JavaVersion.VERSION_11) : JavaVersion.VERSION_11
     }
 }
 
