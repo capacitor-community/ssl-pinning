@@ -1,6 +1,6 @@
 name: "Setup"
 
-on: 
+on:
   workflow_call:
     secrets:
       CAP_GH_RELEASE_TOKEN:

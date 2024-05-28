@@ -1,6 +1,6 @@
 name: "Lint Packages"
 
-on: 
+on:
   workflow_call:
     secrets:
       CAP_GH_RELEASE_TOKEN:
