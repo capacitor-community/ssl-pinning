@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/ionic-team/enterprise-ssl-pinning/compare/1.1.2...1.1.3) (2024-05-28)
+
+
+### Bug Fixes
+
+* cap 5 and 6 interop ([#17](https://github.com/ionic-team/enterprise-ssl-pinning/issues/17)) ([22be8d4](https://github.com/ionic-team/enterprise-ssl-pinning/commit/22be8d45414d0781b37b30c96c6529f54b29c699))
+
+
+
+
+
 ## [1.1.2](https://github.com/ionic-team/enterprise-ssl-pinning/compare/1.1.1...1.1.2) (2024-05-21)
 
 
