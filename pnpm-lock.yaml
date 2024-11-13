@@ -28,20 +28,20 @@ importers:
   packages/capacitor-plugin:
     devDependencies:
       '@capacitor/android':
-        specifier: ^6.0.0
-        version: 6.0.0(@capacitor/core@6.0.0)
+        specifier: next
+        version: 7.0.0-alpha.1(@capacitor/core@7.0.0-alpha.1)
       '@capacitor/cli':
-        specifier: ^6.0.0
-        version: 6.0.0
+        specifier: next
+        version: 7.0.0-alpha.1
       '@capacitor/core':
-        specifier: ^6.0.0
-        version: 6.0.0
+        specifier: next
+        version: 7.0.0-alpha.1
       '@capacitor/docgen':
         specifier: ^0.2.2
         version: 0.2.2
       '@capacitor/ios':
-        specifier: ^6.0.0
-        version: 6.0.0(@capacitor/core@6.0.0)
+        specifier: next
+        version: 7.0.0-alpha.1(@capacitor/core@7.0.0-alpha.1)
       '@ionic/swiftlint-config':
         specifier: ^1.1.2
         version: 1.1.2
@@ -79,23 +79,23 @@ importers:
   packages/example-app:
     dependencies:
       '@capacitor/app':
-        specifier: ^6.0.0
-        version: 6.0.0(@capacitor/core@6.0.0)
+        specifier: next
+        version: 6.0.0-rc.1(@capacitor/core@7.0.0-alpha.1)
       '@capacitor/core':
-        specifier: ^6.0.0
-        version: 6.0.0
+        specifier: next
+        version: 7.0.0-alpha.1
       '@capacitor/haptics':
-        specifier: ^6.0.0
-        version: 6.0.0(@capacitor/core@6.0.0)
+        specifier: next
+        version: 6.0.0-rc.1(@capacitor/core@7.0.0-alpha.1)
       '@capacitor/ios':
-        specifier: ^6.0.0
-        version: 6.0.0(@capacitor/core@6.0.0)
+        specifier: next
+        version: 7.0.0-alpha.1(@capacitor/core@7.0.0-alpha.1)
       '@capacitor/keyboard':
-        specifier: ^6.0.0
-        version: 6.0.0(@capacitor/core@6.0.0)
+        specifier: next
+        version: 6.0.0-rc.1(@capacitor/core@7.0.0-alpha.1)
       '@capacitor/status-bar':
-        specifier: ^6.0.0
-        version: 6.0.0(@capacitor/core@6.0.0)
+        specifier: next
+        version: 6.0.0-rc.1(@capacitor/core@7.0.0-alpha.1)
       '@ionic-enterprise/ssl-pinning':
         specifier: workspace:*
         version: link:../capacitor-plugin
@@ -119,8 +119,8 @@ importers:
         version: 4.3.2(vue@3.4.27(typescript@5.4.5))
     devDependencies:
       '@capacitor/cli':
-        specifier: ^6.0.0
-        version: 6.0.0
+        specifier: next
+        version: 7.0.0-alpha.1
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.9.0
         version: 7.9.0(@typescript-eslint/parser@7.9.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
@@ -173,48 +173,48 @@ packages:
     resolution: {integrity: sha512-6mQNsaLeXTw0nxYUYu+NSa4Hx4BlF1x1x8/PMFbiR+GBSr+2DkECc69b8hgy2frEodNcvPffeH8YfWd3LI6jhQ==}
     engines: {node: '>=6.9.0'}
 
-  '@capacitor/android@6.0.0':
-    resolution: {integrity: sha512-NwL87VO9F1WY/EgvJZN9pIhjejq688k2fRW6XWNLVe3cgGE6nUb9J34KI68fhx3139cf2LVGPUYs+mwZC8esiQ==}
+  '@capacitor/android@7.0.0-alpha.1':
+    resolution: {integrity: sha512-iTqj9L/JMxPMBXYVMVc8nMlHeXklAWCOwzkQScyWFIKuPjNyXstAnMEHI8ogiXFDPI+sLMij0uYnZ6fb5LPlAQ==}
     peerDependencies:
-      '@capacitor/core': ^6.0.0
+      '@capacitor/core': ^7.0.0-alpha.1
 
-  '@capacitor/app@6.0.0':
-    resolution: {integrity: sha512-X5UGd90Jh5p9rmoPyMqFyFWqOypdJgVJhYcM5X1YyDVJJGzmJ5MuYv1+ajj5DW9Qyh+5a3th9WYptdGby8jidA==}
+  '@capacitor/app@6.0.0-rc.1':
+    resolution: {integrity: sha512-wbhAI9ad/kib3fURPabLzJTGqA8dm+fgqJSxJcPqLz4FBmOTD+ZNHyvLjAf74O/CU/m5NeEIHSt3X4aHbVR5dQ==}
     peerDependencies:
-      '@capacitor/core': ^6.0.0
+      '@capacitor/core': next
 
-  '@capacitor/cli@6.0.0':
-    resolution: {integrity: sha512-6z30P0mr53l0VXPwFjzDVuKIt1991bqUSSfShTT2efWN+rBSGSAH2bPID6qSZornH1n5R5Lh/UHq/aGuW523MQ==}
-    engines: {node: '>=18.0.0'}
+  '@capacitor/cli@7.0.0-alpha.1':
+    resolution: {integrity: sha512-Yoh41dhB7ShvKOVMqO+FYGlIFRIIkYDoItRn3z7QF7A0Yrq5erEfw7+VJjAWqCK95LnHq740gk5I935vd760dA==}
+    engines: {node: '>=20.0.0'}
     hasBin: true
 
-  '@capacitor/core@6.0.0':
-    resolution: {integrity: sha512-NvxIQsJcMiIV+Le1DilR2GGyQQbDInfXK1UywGROQ5mycdFlW5XoAPZ+MKnFGB123RoEgE3uhDGgwTXUmSlX9A==}
+  '@capacitor/core@7.0.0-alpha.1':
+    resolution: {integrity: sha512-/7xx9K+h88DliipobLq8L+WvaHffyHV7c7ulU0VfLk6Nhpc37QWNYYu3p5dsBzqpe0Di9DS28qRZrJoIt7r6sg==}
 
   '@capacitor/docgen@0.2.2':
     resolution: {integrity: sha512-617jB5DlKjUljxfoANORWeqffsHqHekckH48oslKWFGzfCHYIAEPfJfMa5M4mVSzn2ifSvWB5C3st4augwhl5w==}
     engines: {node: '>=14.5.0'}
     hasBin: true
 
-  '@capacitor/haptics@6.0.0':
-    resolution: {integrity: sha512-z2TmB+pTbd98Il2I1xpZGClCFwORxxP2m9f1a0rh70c2ubj2atVyZctgxrx1fuoExZTNGSxHaylWfrmjmtelVg==}
+  '@capacitor/haptics@6.0.0-rc.1':
+    resolution: {integrity: sha512-PsvNpoi3PLpx6XGQyBUft/WFtsPC4CCHyS6SuYgjI4Q2WIB/i2phas/Rpt+tTPCXdK8po+tw6S1kHvqpcC3kIA==}
     peerDependencies:
-      '@capacitor/core': ^6.0.0
+      '@capacitor/core': next
 
-  '@capacitor/ios@6.0.0':
-    resolution: {integrity: sha512-7mAs3gjWiE5DPM4AGPduqFSDGXCPwwqQRMzbohVway7/cTWnHomHV8mIojMZE4GILeWO2fILbyu3C8q9pHg2vg==}
+  '@capacitor/ios@7.0.0-alpha.1':
+    resolution: {integrity: sha512-JDTgXhS9CU+GcjfucGa7irHJL71++lUaU2AY5iXER7EFJ/oqgP0iB0vzamEEX2spTE08fqAFygvOuwa4UjXPIw==}
     peerDependencies:
-      '@capacitor/core': ^6.0.0
+      '@capacitor/core': ^7.0.0-alpha.1
 
-  '@capacitor/keyboard@6.0.0':
-    resolution: {integrity: sha512-pPX/PQWWjw5ce47kHEYv6IWlHzuhAxgXihqEAAAGLdwK3u3srgGWCljXrYS9juVBPi/lA1uK7UaUzYI0XrgxVQ==}
+  '@capacitor/keyboard@6.0.0-rc.1':
+    resolution: {integrity: sha512-+brggJIZNPeElAmOGGcnsF8ZTaFFZgRZQVyf2oGU38fqWUAn+v05DzCCnIp6z4JZS1guDX0TXdYro5qTrLbS4w==}
     peerDependencies:
-      '@capacitor/core': ^6.0.0
+      '@capacitor/core': next
 
-  '@capacitor/status-bar@6.0.0':
-    resolution: {integrity: sha512-Wo0ILugYlmENegKDgTzVCPjbvP8h1ObgHslLdgeVG643ViMS/diausHIq8e104WIKCXtKIELmQeYVp9mX7932g==}
+  '@capacitor/status-bar@6.0.0-rc.1':
+    resolution: {integrity: sha512-RSqmdtY9uUknbId6f/+scNYliHbFPF4h90kwizztVC8ZbPR2ZEmAoUTdMXIOtXHT4GnDTmDlsrq9qnR2b9jdhg==}
     peerDependencies:
-      '@capacitor/core': ^6.0.0
+      '@capacitor/core': next
 
   '@esbuild/aix-ppc64@0.20.2':
     resolution: {integrity: sha512-D+EBOJHXdNZcLJRBkhENNG8Wji2kgc9AZ9KiPr1JuZjsNtyHzrsfLRrY0tk2H2aoFu6RANO1y1iPPUCDYWkb5g==}
@@ -413,17 +413,9 @@ packages:
     resolution: {integrity: sha512-XnYNSwfewUqxq+yjER1hxTKggftpNjFLJH0s37jcrNDwbzmbpFTQTVAp4ikNK4rd9DOebX/jbeZb8jfD86IYxw==}
     engines: {node: '>=10.3.0'}
 
-  '@ionic/utils-object@2.1.6':
-    resolution: {integrity: sha512-vCl7sl6JjBHFw99CuAqHljYJpcE88YaH2ZW4ELiC/Zwxl5tiwn4kbdP/gxi2OT3MQb1vOtgAmSNRtusvgxI8ww==}
-    engines: {node: '>=16.0.0'}
-
   '@ionic/utils-process@2.1.10':
     resolution: {integrity: sha512-mZ7JEowcuGQK+SKsJXi0liYTcXd2bNMR3nE0CyTROpMECUpJeAvvaBaPGZf5ERQUPeWBVuwqAqjUmIdxhz5bxw==}
     engines: {node: '>=10.3.0'}
-
-  '@ionic/utils-process@2.1.11':
-    resolution: {integrity: sha512-Uavxn+x8j3rDlZEk1X7YnaN6wCgbCwYQOeIjv/m94i1dzslqWhqIHEqxEyeE8HsT5Negboagg7GtQiABy+BLbA==}
-    engines: {node: '>=16.0.0'}
 
   '@ionic/utils-stream@3.1.5':
     resolution: {integrity: sha512-hkm46uHvEC05X/8PHgdJi4l4zv9VQDELZTM+Kz69odtO9zZYfnt8DkfXHJqJ+PxmtiE5mk/ehJWLnn/XAczTUw==}
@@ -436,10 +428,6 @@ packages:
   '@ionic/utils-terminal@2.3.3':
     resolution: {integrity: sha512-RnuSfNZ5fLEyX3R5mtcMY97cGD1A0NVBbarsSQ6yMMfRJ5YHU7hHVyUfvZeClbqkBC/pAqI/rYJuXKCT9YeMCQ==}
     engines: {node: '>=10.3.0'}
-
-  '@ionic/utils-terminal@2.3.4':
-    resolution: {integrity: sha512-cEiMFl3jklE0sW60r8JHH3ijFTwh/jkdEKWbylSyExQwZ8pPuwoXz7gpkWoJRLuoRHHSvg+wzNYyPJazIHfoJA==}
-    engines: {node: '>=16.0.0'}
 
   '@ionic/utils-terminal@2.3.5':
     resolution: {integrity: sha512-3cKScz9Jx2/Pr9ijj1OzGlBDfcmx7OMVBt4+P1uRR0SSW4cm1/y3Mo4OY3lfkuaYifMNBW8Wz6lQHbs1bihr7A==}
@@ -3420,19 +3408,18 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.5
       to-fast-properties: 2.0.0
 
-  '@capacitor/android@6.0.0(@capacitor/core@6.0.0)':
+  '@capacitor/android@7.0.0-alpha.1(@capacitor/core@7.0.0-alpha.1)':
     dependencies:
-      '@capacitor/core': 6.0.0
+      '@capacitor/core': 7.0.0-alpha.1
 
-  '@capacitor/app@6.0.0(@capacitor/core@6.0.0)':
+  '@capacitor/app@6.0.0-rc.1(@capacitor/core@7.0.0-alpha.1)':
     dependencies:
-      '@capacitor/core': 6.0.0
+      '@capacitor/core': 7.0.0-alpha.1
 
-  '@capacitor/cli@6.0.0':
+  '@capacitor/cli@7.0.0-alpha.1':
     dependencies:
       '@ionic/cli-framework-output': 2.2.8
       '@ionic/utils-fs': 3.1.7
-      '@ionic/utils-process': 2.1.11
       '@ionic/utils-subprocess': 2.1.11
       '@ionic/utils-terminal': 2.3.5
       commander: 9.5.0
@@ -3451,7 +3438,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@capacitor/core@6.0.0':
+  '@capacitor/core@7.0.0-alpha.1':
     dependencies:
       tslib: 2.6.2
 
@@ -3463,21 +3450,21 @@ snapshots:
       minimist: 1.2.8
       typescript: 4.2.4
 
-  '@capacitor/haptics@6.0.0(@capacitor/core@6.0.0)':
+  '@capacitor/haptics@6.0.0-rc.1(@capacitor/core@7.0.0-alpha.1)':
     dependencies:
-      '@capacitor/core': 6.0.0
+      '@capacitor/core': 7.0.0-alpha.1
 
-  '@capacitor/ios@6.0.0(@capacitor/core@6.0.0)':
+  '@capacitor/ios@7.0.0-alpha.1(@capacitor/core@7.0.0-alpha.1)':
     dependencies:
-      '@capacitor/core': 6.0.0
+      '@capacitor/core': 7.0.0-alpha.1
 
-  '@capacitor/keyboard@6.0.0(@capacitor/core@6.0.0)':
+  '@capacitor/keyboard@6.0.0-rc.1(@capacitor/core@7.0.0-alpha.1)':
     dependencies:
-      '@capacitor/core': 6.0.0
+      '@capacitor/core': 7.0.0-alpha.1
 
-  '@capacitor/status-bar@6.0.0(@capacitor/core@6.0.0)':
+  '@capacitor/status-bar@6.0.0-rc.1(@capacitor/core@7.0.0-alpha.1)':
     dependencies:
-      '@capacitor/core': 6.0.0
+      '@capacitor/core': 7.0.0-alpha.1
 
   '@esbuild/aix-ppc64@0.20.2':
     optional: true
@@ -3633,28 +3620,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@ionic/utils-object@2.1.6':
-    dependencies:
-      debug: 4.3.4
-      tslib: 2.6.2
-    transitivePeerDependencies:
-      - supports-color
-
   '@ionic/utils-process@2.1.10':
     dependencies:
       '@ionic/utils-object': 2.1.5
       '@ionic/utils-terminal': 2.3.3
-      debug: 4.3.4
-      signal-exit: 3.0.7
-      tree-kill: 1.2.2
-      tslib: 2.6.2
-    transitivePeerDependencies:
-      - supports-color
-
-  '@ionic/utils-process@2.1.11':
-    dependencies:
-      '@ionic/utils-object': 2.1.6
-      '@ionic/utils-terminal': 2.3.4
       debug: 4.3.4
       signal-exit: 3.0.7
       tree-kill: 1.2.2
@@ -3683,20 +3652,6 @@ snapshots:
       - supports-color
 
   '@ionic/utils-terminal@2.3.3':
-    dependencies:
-      '@types/slice-ansi': 4.0.0
-      debug: 4.3.4
-      signal-exit: 3.0.7
-      slice-ansi: 4.0.0
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-      tslib: 2.6.2
-      untildify: 4.0.0
-      wrap-ansi: 7.0.0
-    transitivePeerDependencies:
-      - supports-color
-
-  '@ionic/utils-terminal@2.3.4':
     dependencies:
       '@types/slice-ansi': 4.0.0
       debug: 4.3.4

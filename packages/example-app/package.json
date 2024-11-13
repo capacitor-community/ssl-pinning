@@ -7,12 +7,12 @@
     "build": "vue-tsc --noEmit && vite build"
   },
   "dependencies": {
-    "@capacitor/app": "^6.0.0",
-    "@capacitor/core": "^6.0.0",
-    "@capacitor/haptics": "^6.0.0",
-    "@capacitor/ios": "^6.0.0",
-    "@capacitor/keyboard": "^6.0.0",
-    "@capacitor/status-bar": "^6.0.0",
+    "@capacitor/app": "next",
+    "@capacitor/core": "next",
+    "@capacitor/haptics": "next",
+    "@capacitor/ios": "next",
+    "@capacitor/keyboard": "next",
+    "@capacitor/status-bar": "next",
     "@ionic-enterprise/ssl-pinning": "workspace:*",
     "@ionic/vue": "^6.7.5",
     "@ionic/vue-router": "^6.7.5",
@@ -22,7 +22,7 @@
     "vue-router": "^4.2.2"
   },
   "devDependencies": {
-    "@capacitor/cli": "^6.0.0",
+    "@capacitor/cli": "next",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
     "@vitejs/plugin-vue": "^4.2.3",
