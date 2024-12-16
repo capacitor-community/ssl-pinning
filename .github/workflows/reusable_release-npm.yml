@@ -55,7 +55,7 @@ jobs:
         run: |
           pnpm run publish:dev
 
-      - name: 'RC Release'
+      - name: 'Next Release'
         if: "!inputs.create-dev-release && inputs.create-rc-release"
         shell: bash
         env:

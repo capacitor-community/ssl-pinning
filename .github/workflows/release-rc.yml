@@ -1,4 +1,4 @@
-name: "Release RC"
+name: "Release Next"
 
 on: workflow_dispatch
 
@@ -20,7 +20,7 @@ jobs:
     secrets:
       CAP_GH_RELEASE_TOKEN: ${{ secrets.CAP_GH_RELEASE_TOKEN }}
 
-  release-npm-rc:
+  release-npm-next:
     needs: ['build-packages', 'lint-test']
     uses: ./.github/workflows/reusable_release-npm.yml
     with:
