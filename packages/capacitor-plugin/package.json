@@ -61,7 +61,7 @@
     "typescript": "~5.4.5"
   },
   "peerDependencies": {
-    "@capacitor/core": "next"
+    "@capacitor/core": ">=7.0.0"
   },
   "swiftlint": "@ionic/swiftlint-config",
   "capacitor": {
