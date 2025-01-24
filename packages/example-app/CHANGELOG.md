@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/ionic-team/enterprise-ssl-pinning/compare/2.0.0-next.1...2.0.0) (2025-01-24)
+
+**Note:** Version bump only for package example-app
+
+
+
+
+
 # [2.0.0-next.1](https://github.com/ionic-team/enterprise-ssl-pinning/compare/1.1.3...2.0.0-next.1) (2024-12-16)
 
 **Note:** Version bump only for package example-app
