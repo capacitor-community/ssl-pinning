@@ -1,0 +1,36 @@
+{
+  "name": "example-app-spm",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build"
+  },
+  "dependencies": {
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/haptics": "^7.0.0",
+    "@capacitor/ios": "^7.0.0",
+    "@capacitor/keyboard": "^7.0.0",
+    "@capacitor/status-bar": "^7.0.0",
+    "@ionic-enterprise/ssl-pinning": "workspace:*",
+    "@ionic/vue": "^6.7.5",
+    "@ionic/vue-router": "^6.7.5",
+    "core-js": "^3.31.0",
+    "ionicons": "^6.1.3",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.9.0",
+    "@typescript-eslint/parser": "^7.9.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.26.0",
+    "typescript": "~5.4.5",
+    "vite": "^5.2.11",
+    "vue-tsc": "^2.0.19"
+  },
+  "description": "An Ionic project"
+}

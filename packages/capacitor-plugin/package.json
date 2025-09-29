@@ -10,8 +10,10 @@
     "android/src/main/",
     "android/build.gradle",
     "dist/",
-    "ios/Plugin/",
-    "IonicEnterpriseSslPinning.podspec"
+    "IonicEnterpriseSslPinning.podspec",
+    "ios/Sources",
+    "ios/Tests",
+    "Package.swift"
   ],
   "author": "Ionic Team",
   "repository": {
@@ -28,7 +30,7 @@
   ],
   "scripts": {
     "verify": "pnpm run verify:ios && pnpm run verify:android && pnpm run verify:web",
-    "verify:ios": "cd ios && pod install && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin -destination generic/platform=iOS && cd ..",
+    "verify:ios": "xcodebuild -scheme IonicEnterpriseSslPinning -destination generic/platform=iOS",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "pnpm run build",
     "lint": "pnpm run eslint . --ext ts && pnpm run prettier \"**/*.{css,html,ts,js,java}\" --check && pnpm run swiftlint -- lint",
@@ -43,11 +45,11 @@
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@capacitor/android": "next",
-    "@capacitor/cli": "next",
-    "@capacitor/core": "next",
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
     "@capacitor/docgen": "^0.2.2",
-    "@capacitor/ios": "next",
+    "@capacitor/ios": "^7.0.0",
     "@ionic/swiftlint-config": "^1.1.2",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
