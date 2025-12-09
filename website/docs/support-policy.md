@@ -7,9 +7,12 @@ This policy is for SSL Pinning as maintained by Ionic. Capacitor Core, Capacitor
 
 ### Current Support Status
 
-| Version |     Status     |   Released   | Active Support Ends | Long-Term Support Ends |
-| :-----: | :------------: | :----------: | :-----------------: | :--------------------: |
-|   V1    | Active Support | May 12, 2023 |         TBD         |          TBD           |
+| Version |     Status        |   Released   | Active Support Ends | Long-Term Support Ends |
+| :-----: | :---------------: | :----------: | :-----------------: | :--------------------: |
+|   V1    | Long Term Support | May 12, 2023 |     Dec 9, 2025     |        Dec 9, 2026     |
+|   V2    | Long Term Support | May 12, 2023 |     Dec 9, 2025     |        Dec 9, 2026     |
+|   V3    |   Active Support  |  Dec 9, 2025 |         TBD         |          TBD           |   
+
 
 ### Support Policy
 
