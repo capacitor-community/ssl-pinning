@@ -5,7 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.0.0](https://github.com/ionic-team/enterprise-ssl-pinning/compare/2.0.0-next.1...2.0.0) (2025-01-24)
 
-**Note:** Version bump only for package root
+**Note:** Version bump only for package @ionic-enterprise/ssl-pinning
 
 
 
@@ -13,7 +13,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.0.0-next.1](https://github.com/ionic-team/enterprise-ssl-pinning/compare/1.1.3...2.0.0-next.1) (2024-12-16)
 
-**Note:** Version bump only for package root
+**Note:** Version bump only for package @ionic-enterprise/ssl-pinning
 
 
 
@@ -71,7 +71,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0](https://github.com/ionic-team/enterprise-ssl-pinning/compare/1.0.0-rc.0...1.0.0) (2023-05-12)
 
-**Note:** Version bump only for package root
+**Note:** Version bump only for package @ionic-enterprise/ssl-pinning
 
 
 

@@ -1,27 +1,77 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "@ionic-enterprise/ssl-pinning",
+  "version": "3.0.0",
+  "description": "Provide SSL pinning for Capacitor Native HTTP Plugin",
+  "main": "dist/plugin.cjs.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "unpkg": "dist/plugin.js",
+  "files": [
+    "android/src/main/",
+    "android/build.gradle",
+    "dist/",
+    "IonicEnterpriseSslPinning.podspec",
+    "ios/Sources",
+    "ios/Tests",
+    "Package.swift"
+  ],
+  "author": "Ionic Team",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/enterprise-ssl-pinning.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ionic-team/enterprise-ssl-pinning/issues"
+  },
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native"
+  ],
   "scripts": {
-    "build": "nx run-many --target=build --parallel=5 && nx run-many --target=build-docs --parallel=5",
-    "fmt": "nx run-many --target=fmt --parallel=5",
-    "lint": "nx run-many --target=lint --parallel=5",
-    "publish:dev": "lerna publish prerelease --conventional-commits --conventional-prerelease --preid dev-$(date +\"%Y%m%dT%H%M%S\") --dist-tag dev --force-publish --no-verify-access --no-changelog --no-git-tag-version --no-push --yes",
-    "publish:rc": "lerna publish prerelease --conventional-commits --conventional-prerelease --preid next --dist-tag next --force-publish --no-verify-access --yes",
-    "publish:release-from-prerelease": "lerna publish --conventional-graduate --conventional-commits --dist-tag latest --force-publish --no-verify-access --yes",
-    "publish:latest": "lerna publish --conventional-commits --dist-tag latest --force-publish --no-verify-access --yes",
-    "prepare": "husky install"
+    "verify": "pnpm run verify:ios && pnpm run verify:android && pnpm run verify:web",
+    "verify:ios": "xcodebuild -scheme IonicEnterpriseSslPinning -destination generic/platform=iOS",
+    "verify:android": "cd android && ./gradlew clean build test && cd ..",
+    "verify:web": "pnpm run build",
+    "lint": "pnpm run eslint . --ext ts && pnpm run prettier \"**/*.{css,html,ts,js,java}\" --check && pnpm run swiftlint -- lint",
+    "fmt": "pnpm run eslint . --ext ts --fix && pnpm run prettier \"**/*.{css,html,ts,js,java}\" --write && pnpm run swiftlint -- --fix --format",
+    "eslint": "eslint",
+    "prettier": "prettier",
+    "swiftlint": "node-swiftlint",
+    "docgen": "docgen --api SSLPinningPlugin --output-readme README.md --output-json dist/docs.json",
+    "build": "pnpm run clean && pnpm run docgen && tsc && rollup -c rollup.config.mjs",
+    "clean": "rimraf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@types/node": "^20.12.12",
-    "husky": "^9.0.11",
-    "lerna": "^8.1.3",
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/cli": "^8.0.0",
+    "@capacitor/core": "^8.0.0",
+    "@capacitor/docgen": "^0.2.2",
+    "@capacitor/ios": "^8.0.0",
+    "@ionic/swiftlint-config": "^1.1.2",
+    "@typescript-eslint/eslint-plugin": "^7.9.0",
+    "@typescript-eslint/parser": "^7.9.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "~2.8.8",
+    "prettier-plugin-java": "~2.1.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^4.17.2",
+    "swiftlint": "^1.0.2",
     "typescript": "~5.4.5"
   },
-  "engines": {
-    "node": ">=20",
-    "pnpm": ">=9"
+  "peerDependencies": {
+    "@capacitor/core": ">=8.0.0"
   },
-  "dependencies": {
-    "nx": "19.8.4"
+  "swiftlint": "@ionic/swiftlint-config",
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
   }
 }
