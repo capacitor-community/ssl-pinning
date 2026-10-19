@@ -104,7 +104,7 @@ class SSLPinning {
         val certificateFactory = CertificateFactory.getInstance("X.509")
         for (cert in certs) {
             val certificate = certificateFactory.generateCertificate(cert.value)
-            keyStore.setCertificateEntry("ionic-enterprise-ssl-pinning-" + cert.key, certificate)
+            keyStore.setCertificateEntry("capacitor-community-ssl-pinning-" + cert.key, certificate)
         }
         return keyStore
     }
