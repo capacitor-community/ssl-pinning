@@ -1,4 +1,4 @@
-package io.ionic.sslpinning
+package com.getcapacitor.community.sslpinning
 
 import android.annotation.SuppressLint
 import android.util.Base64

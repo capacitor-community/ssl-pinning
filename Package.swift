@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "IonicEnterpriseSslPinning",
+    name: "CapacitorCommunitySslPinning",
     platforms: [.iOS(.v15)],
     products: [
         .library(
-            name: "IonicEnterpriseSslPinning",
+            name: "CapacitorCommunitySslPinning",
             targets: ["SSLPinningPlugin"])
     ],
     dependencies: [

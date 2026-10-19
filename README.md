@@ -1,13 +1,32 @@
-# @ionic-enterprise/ssl-pinning
+<p align="center"><br><img src="https://user-images.githubusercontent.com/236501/85893648-1c92e880-b7a8-11ea-926d-95355b8175c7.png" width="128" height="128" /></p>
+<h3 align="center">SSL Pinning</h3>
+<p align="center"><strong><code>@capacitor-community/ssl-pinning</code></strong></p>
+<p align="center">
+  Provide SSL pinning for Capacitor Native HTTP Plugin
+</p>
 
-Provide SSL pinning for Capacitor Native HTTP Plugin
+<p align="center">
+  <img src="https://img.shields.io/maintenance/yes/2026?style=flat-square" />
+  <a href="https://www.npmjs.com/package/@capacitor-community/ssl-pinning"><img src="https://img.shields.io/npm/l/@capacitor-community/ssl-pinning?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@capacitor-community/ssl-pinning"><img src="https://img.shields.io/npm/v/@capacitor-community/ssl-pinning?style=flat-square" /></a>
+</p>
 
-## Install
+## Maintainers
+
+| Maintainer | GitHub | Social |
+| -----------| -------| -------|
+| Capacitor Community | [capacitor-community](https://github.com/capacitor-community) | |
+
+## Installation
 
 ```bash
-npm install @ionic-enterprise/ssl-pinning
+npm install @capacitor-community/ssl-pinning
 npx cap sync
 ```
+
+## Demo
+
+A working example can be found in the [example-app](./example-app) directory.
 
 ## API
 
@@ -47,7 +66,7 @@ In `capacitor.config.json`:
 In `capacitor.config.ts`:
 
 ```ts
-/// <reference types="@ionic-enterprise/ssl-pinning" />
+/// <reference types="@capacitor-community/ssl-pinning" />
 
 import { CapacitorConfig } from '@capacitor/cli';
 

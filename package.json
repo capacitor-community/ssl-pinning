@@ -1,71 +1,74 @@
 {
-  "name": "@ionic-enterprise/ssl-pinning",
-  "version": "3.0.0",
+  "name": "@capacitor-community/ssl-pinning",
+  "version": "4.0.0",
   "description": "Provide SSL pinning for Capacitor Native HTTP Plugin",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "unpkg": "dist/plugin.js",
   "files": [
-    "android/src/main/",
-    "android/build.gradle",
+    "android",
     "dist/",
-    "IonicEnterpriseSslPinning.podspec",
-    "ios/Sources",
-    "ios/Tests",
-    "Package.swift"
+    "ios/",
+    "Package.swift",
+    "CapacitorCommunitySslPinning.podspec"
   ],
-  "author": "Ionic Team",
+  "author": "Capacitor Community",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/enterprise-ssl-pinning.git"
+    "url": "git+https://github.com/capacitor-community/ssl-pinning.git"
   },
   "bugs": {
-    "url": "https://github.com/ionic-team/enterprise-ssl-pinning/issues"
+    "url": "https://github.com/capacitor-community/ssl-pinning/issues"
   },
   "keywords": [
     "capacitor",
     "plugin",
-    "native"
+    "native",
+    "ssl",
+    "pinning",
+    "security"
   ],
   "scripts": {
-    "verify": "pnpm run verify:ios && pnpm run verify:android && pnpm run verify:web",
-    "verify:ios": "xcodebuild -scheme IonicEnterpriseSslPinning -destination generic/platform=iOS",
+    "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
+    "verify:ios": "xcodebuild -scheme CapacitorCommunitySslPinning -destination generic/platform=iOS",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
-    "verify:web": "pnpm run build",
-    "lint": "pnpm run eslint . --ext ts && pnpm run prettier \"**/*.{css,html,ts,js,java}\" --check && pnpm run swiftlint -- lint",
-    "fmt": "pnpm run eslint . --ext ts --fix && pnpm run prettier \"**/*.{css,html,ts,js,java}\" --write && pnpm run swiftlint -- --fix --format",
-    "eslint": "eslint",
-    "prettier": "prettier",
+    "verify:web": "npm run build",
+    "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
+    "fmt": "npm run eslint -- --fix && npm run prettier -- --write && npm run swiftlint -- autocorrect --format",
+    "eslint": "eslint . --ext ts",
+    "prettier": "prettier \"**/*.{css,html,ts,js,java}\" --plugin=prettier-plugin-java",
     "swiftlint": "node-swiftlint",
     "docgen": "docgen --api SSLPinningPlugin --output-readme README.md --output-json dist/docs.json",
-    "build": "pnpm run clean && pnpm run docgen && tsc && rollup -c rollup.config.mjs",
+    "build": "npm run clean && tsc && rollup -c rollup.config.mjs",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@capacitor/android": "^8.0.0",
-    "@capacitor/cli": "^8.0.0",
     "@capacitor/core": "^8.0.0",
-    "@capacitor/docgen": "^0.2.2",
+    "@capacitor/docgen": "^0.3.0",
     "@capacitor/ios": "^8.0.0",
-    "@ionic/swiftlint-config": "^1.1.2",
-    "@typescript-eslint/eslint-plugin": "^7.9.0",
-    "@typescript-eslint/parser": "^7.9.0",
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
-    "prettier": "~2.8.8",
-    "prettier-plugin-java": "~2.1.0",
-    "rimraf": "^3.0.2",
-    "rollup": "^4.17.2",
-    "swiftlint": "^1.0.2",
-    "typescript": "~5.4.5"
+    "@ionic/eslint-config": "^0.4.0",
+    "@ionic/prettier-config": "^4.0.0",
+    "@ionic/swiftlint-config": "^2.0.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-java": "^2.6.6",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.30.1",
+    "swiftlint": "^2.0.0",
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "@capacitor/core": ">=8.0.0"
   },
   "swiftlint": "@ionic/swiftlint-config",
+  "eslintConfig": {
+    "extends": "@ionic/eslint-config/recommended"
+  },
   "capacitor": {
     "ios": {
       "src": "ios"
@@ -73,5 +76,8 @@
     "android": {
       "src": "android"
     }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
