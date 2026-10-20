@@ -35,7 +35,7 @@ In `capacitor.config.json`:
 In `capacitor.config.ts`:
 
 ```ts
-/// <reference types="@capacitor/sslpinning" />
+/// <reference types="@capacitor-community/ssl-pinning" />
 
 import { CapacitorConfig } from '@capacitor/cli';
 
