@@ -19,3 +19,10 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Capacitor's HTTP plugin finds this class by name and calls it through reflection.
+-keep class com.getcapacitor.community.sslpinning.SSLPinning {
+    public <init>();
+    public javax.net.ssl.SSLSocketFactory getSSLSocketFactory(com.getcapacitor.Bridge);
+    public boolean isDomainExcluded(com.getcapacitor.Bridge, java.net.URL);
+}
