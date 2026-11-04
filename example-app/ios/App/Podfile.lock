@@ -1,14 +1,12 @@
 PODS:
-  - Capacitor (8.5.3):
-    - CapacitorCordova
-  - CapacitorApp (8.1.2):
+  - Capacitor (9.0.0-beta.0)
+  - CapacitorApp (9.0.0-alpha.2):
     - Capacitor
-  - CapacitorCordova (8.5.3)
-  - CapacitorHaptics (8.0.2):
+  - CapacitorHaptics (9.0.0-next.1):
     - Capacitor
-  - CapacitorKeyboard (8.0.6):
+  - CapacitorKeyboard (9.0.0-next.1):
     - Capacitor
-  - CapacitorStatusBar (8.0.4):
+  - CapacitorStatusBar (9.0.0-alpha.2):
     - Capacitor
   - IonicEnterpriseSslPinning (3.0.0):
     - Capacitor
@@ -16,7 +14,6 @@ PODS:
 DEPENDENCIES:
   - "Capacitor (from `../../node_modules/@capacitor/ios`)"
   - "CapacitorApp (from `../../node_modules/@capacitor/app`)"
-  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
   - "CapacitorHaptics (from `../../node_modules/@capacitor/haptics`)"
   - "CapacitorKeyboard (from `../../node_modules/@capacitor/keyboard`)"
   - "CapacitorStatusBar (from `../../node_modules/@capacitor/status-bar`)"
@@ -27,8 +24,6 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/ios"
   CapacitorApp:
     :path: "../../node_modules/@capacitor/app"
-  CapacitorCordova:
-    :path: "../../node_modules/@capacitor/ios"
   CapacitorHaptics:
     :path: "../../node_modules/@capacitor/haptics"
   CapacitorKeyboard:
@@ -39,14 +34,13 @@ EXTERNAL SOURCES:
     :path: "../../.."
 
 SPEC CHECKSUMS:
-  Capacitor: 2f67eaeb8ed79909cd35b5e7439a5c2a9ca58e0f
-  CapacitorApp: 7b7e43debe505bc61beedb83796aa1368c86078b
-  CapacitorCordova: 0b7326439c7a09fc5d20eced5e0dab986327a493
-  CapacitorHaptics: 296f771ecd89c7a1bd92a7b6826a7d268e2e70f5
-  CapacitorKeyboard: f9e85e685082e9f63404de15db4a4291448b0912
-  CapacitorStatusBar: ff844df1f126da6c4fbc4028272425fa3a91e7e3
-  IonicEnterpriseSslPinning: 04e8fc9cbd9fcb3c5e428d95c27a773bd7983563
+  Capacitor: 99cf3d4c60fdccb9c06541e1b353cd6beafa31c8
+  CapacitorApp: 1d870da64e84d2e7bba00c28a12ccf0208a17ee3
+  CapacitorHaptics: cf461bf71051a548bb99107554563ab05c4f3a06
+  CapacitorKeyboard: 222ced64b88632400503c87e0b188952f3ce8265
+  CapacitorStatusBar: 838088db4185b93e8168e69e3b1dcf1f093a305f
+  IonicEnterpriseSslPinning: 1eaed9f5ddaf44e38ebb3918e518eb99f83755ef
 
-PODFILE CHECKSUM: 22c094af622e295e0bc12a07a978b72c22cdf03a
+PODFILE CHECKSUM: b612f4ed520d2a6a478a0b2cb7132e9ea826b91e
 
 COCOAPODS: 1.16.2
