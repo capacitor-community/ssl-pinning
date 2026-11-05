@@ -9,6 +9,7 @@
   "files": [
     "android/src/main/",
     "android/build.gradle",
+    "android/proguard-rules.pro",
     "dist/",
     "IonicEnterpriseSslPinning.podspec",
     "ios/Sources",
@@ -45,25 +46,25 @@
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@capacitor/android": "^8.0.0",
-    "@capacitor/cli": "^8.0.0",
-    "@capacitor/core": "^8.0.0",
-    "@capacitor/docgen": "^0.2.2",
-    "@capacitor/ios": "^8.0.0",
-    "@ionic/swiftlint-config": "^1.1.2",
+    "@capacitor/android": "next",
+    "@capacitor/cli": "next",
+    "@capacitor/core": "next",
+    "@capacitor/docgen": "^0.3.1",
+    "@capacitor/ios": "next",
+    "@ionic/swiftlint-config": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "~2.8.8",
     "prettier-plugin-java": "~2.1.0",
-    "rimraf": "^3.0.2",
-    "rollup": "^4.17.2",
-    "swiftlint": "^1.0.2",
-    "typescript": "~5.4.5"
+    "rimraf": "^6.1.0",
+    "rollup": "^4.53.2",
+    "swiftlint": "^2.0.0",
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@capacitor/core": ">=8.0.0"
+    "@capacitor/core": ">=9.0.0-beta.0"
   },
   "swiftlint": "@ionic/swiftlint-config",
   "capacitor": {
