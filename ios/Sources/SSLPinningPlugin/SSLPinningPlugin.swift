@@ -178,13 +178,15 @@ class URLSessionPinningDelegate: NSObject, URLSessionDelegate {
     }
 
     private func tryCert(_ cert: CertListEntry, _ challenge: URLAuthenticationChallenge, _ serverTrust: SecTrust) -> Bool {
-        let filePath = Bundle.main.path(forResource: cert.fileName, ofType: cert.extensionOfFile, inDirectory: "public/certs")!
-        let data = try! Data(contentsOf: URL(fileURLWithPath: filePath))
-        var certificate = SecCertificateCreateWithData(nil, data as CFData)
-        if certificate == nil {
-            let certText = try! String(contentsOf: URL(fileURLWithPath: filePath), encoding: .utf8)
-            let certData = Data(base64Encoded: certText.replacingOccurrences(of: "-----BEGIN CERTIFICATE-----", with: "").replacingOccurrences(of: "-----END CERTIFICATE-----", with: ""), options: .ignoreUnknownCharacters)
-            certificate = SecCertificateCreateWithData(nil, certData! as CFData)
+        var certificate: SecCertificate?
+        if let filePath = Bundle.main.path(forResource: cert.fileName, ofType: cert.extensionOfFile, inDirectory: "public/certs"),
+           let data = try? Data(contentsOf: URL(fileURLWithPath: filePath)) {
+            certificate = SecCertificateCreateWithData(nil, data as CFData)
+            if certificate == nil,
+               let certText = String(data: data, encoding: .utf8),
+               let certData = Data(base64Encoded: certText.replacingOccurrences(of: "-----BEGIN CERTIFICATE-----", with: "").replacingOccurrences(of: "-----END CERTIFICATE-----", with: ""), options: .ignoreUnknownCharacters) {
+                certificate = SecCertificateCreateWithData(nil, certData as CFData)
+            }
         }
         guard let certificate = certificate else {
             CAPLog.print("\(cert.fileName).\(cert.extensionOfFile) failed to load")
