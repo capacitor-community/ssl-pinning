@@ -25,6 +25,11 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Lint
+        run: |
+          brew install swiftlint
+          npm run lint
+
       - name: Verify Plugin
         run: npm run verify
 
